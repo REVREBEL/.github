@@ -1,0 +1,9 @@
+{
+  "name": "CodeQL (JavaScript)",
+  "description": "Static code analysis with GitHub Advanced Security.",
+  "iconName": "shield",
+  "categories": [
+    "Security",
+    "JavaScript"
+  ]
+}

@@ -1,0 +1,46 @@
+# .circleci/config.yml
+version: 2.1
+
+orbs:
+  codecov: codecov/codecov@4.0.1
+  python: circleci/python@3.0.0  # optional, for caching helpers
+
+jobs:
+  test-api:
+    docker:
+      - image: cimg/python:3.10
+    working_directory: ~/project
+    steps:
+      - checkout
+      # Optional cache:
+      - python/install-packages:
+          pkg-manager: pip
+          app-dir: api
+          pip-dependency-file: api/requirements.txt
+      # If not using the orb's helper, do it manually:
+      # - run: pip install -r api/requirements.txt
+
+      - run:
+          name: Run tests and collect coverage
+          command: |
+            cd api
+            pytest --cov=api.calculator --cov-report=xml --junitxml=test-results/results.xml
+            mv coverage.xml ../coverage.xml
+
+      # Upload coverage (Codecov looks for coverage.xml by default)
+      - codecov/upload:
+          file: coverage.xml
+          # CODECOV_TOKEN must be set in CircleCI project settings (Env Var)
+
+      # Optional: store test results/artifacts in CircleCI
+      - store_test_results:
+          path: api/test-results
+      - store_artifacts:
+          path: coverage.xml
+          destination: coverage.xml
+
+workflows:
+  version: 2.1
+  build-test:
+    jobs:
+      - test-api

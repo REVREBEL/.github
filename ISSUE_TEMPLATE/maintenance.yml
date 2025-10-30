@@ -1,0 +1,27 @@
+name: Maintenance
+description: Track chores like upgrades, refactors, or tooling
+labels: ['type: maintenance', 'type: chore']
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What area needs maintenance and why?
+    validations: { required: true }
+  - type: textarea
+    id: plan
+    attributes:
+      label: Plan
+      placeholder: |
+        - [ ] Step 1
+        - [ ] Step 2
+  - type: dropdown
+    id: type
+    attributes:
+      label: Maintenance type
+      options: [dependency, refactor, ci, docs, tooling]
+  - type: textarea
+    id: risk
+    attributes:
+      label: Risk & rollback
+      description: Any risks? How to roll back?

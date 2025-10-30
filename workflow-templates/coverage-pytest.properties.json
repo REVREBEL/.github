@@ -1,0 +1,9 @@
+{
+  "name": "Coverage (Pytest) via reusable workflow",
+  "description": "Runs Pytest with coverage and uploads to Codecov. Uses org reusable workflow.",
+  "iconName": "coverage",
+  "categories": [
+    "Testing",
+    "Python"
+  ]
+}

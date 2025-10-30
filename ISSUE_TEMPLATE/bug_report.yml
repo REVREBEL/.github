@@ -1,0 +1,32 @@
+name: Bug report
+description: File a bug report
+labels: ['type: bug', 'type: triage']
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened? What did you expect?
+    validations: { required: true }
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1. Go to '...'
+        2. Run '...'
+        3. See error
+  - type: input
+    id: version
+    attributes:
+      label: Affected version (if any)
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options: [blocker, critical, major, minor]
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / screenshots
+      render: bash

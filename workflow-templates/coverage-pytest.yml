@@ -1,0 +1,17 @@
+name: Coverage (Pytest)
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  coverage:
+    uses: REVREBEL/.github/.github/workflows/_coverage-pytest.yml@main
+    with:
+      python_version: '3.11'
+      working_directory: '.'
+      install_cmd: 'pip install -r requirements.txt'
+      run_tests_cmd: 'pytest --cov --cov-report=xml'
+      coverage_path: 'coverage.xml'
+      codecov_flags: 'pytest'
+      codecov_fail_ci_if_error: 'false'

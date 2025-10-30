@@ -1,0 +1,18 @@
+# Label PRs by file globs
+docs:
+  - '**/*.md'
+ci:
+  - '.github/workflows/**'
+frontend:
+  - 'apps/**'
+  - 'packages/**'
+  - '**/*.css'
+  - '**/*.scss'
+  - '**/*.ts'
+  - '**/*.tsx'
+backend:
+  - '**/*.go'
+  - '**/*.py'
+  - '**/*.rs'
+  - '**/*.rb'
+  - '**/*.kt'

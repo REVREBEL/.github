@@ -1,0 +1,9 @@
+{
+  "name": "Coverage (Jest) via reusable workflow",
+  "description": "Runs Jest with coverage and uploads to Codecov. Uses org reusable workflow.",
+  "iconName": "coverage",
+  "categories": [
+    "Testing",
+    "JavaScript"
+  ]
+}

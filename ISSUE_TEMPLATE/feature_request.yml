@@ -1,0 +1,23 @@
+name: Feature request
+description: Suggest an idea for a new feature
+about: "Suggest an idea or possible new feature for this project."
+title: ""
+labels: ['type: feature']
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+    validations: { required: true }
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: input
+    id: impact
+    attributes:
+      label: Impact / target users

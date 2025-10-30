@@ -1,0 +1,12 @@
+name: Node CI (Reusable)
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  use-shared:
+    uses: REVREBEL/.github/.github/workflows/_ci-reusable.yml@main
+    with:
+      node_version: ${{ vars.NODE_VERSION || '22' }}
+      project_name: ${{ github.event.repository.name || github.repository }}

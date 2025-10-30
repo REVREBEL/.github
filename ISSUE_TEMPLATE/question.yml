@@ -1,0 +1,10 @@
+name: Question
+description: Ask a question
+labels: ['type: question']
+body:
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What are you trying to accomplish?
+    validations: { required: true }

@@ -1,0 +1,9 @@
+{
+  "name": "Node CI (pnpm via reusable workflow)",
+  "description": "Checks out code, sets up Node, installs via pnpm, lints & tests using the org reusable CI.",
+  "iconName": "node",
+  "categories": [
+    "JavaScript",
+    "Continuous integration"
+  ]
+}

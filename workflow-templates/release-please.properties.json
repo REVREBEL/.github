@@ -1,0 +1,9 @@
+{
+  "name": "Release Please (Node)",
+  "description": "Conventional-commit based automated releases and changelogs.",
+  "iconName": "package",
+  "categories": [
+    "Release management",
+    "JavaScript"
+  ]
+}

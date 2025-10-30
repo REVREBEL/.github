@@ -1,0 +1,90 @@
+# Canonical label set for REVREBEL org
+# Managed by .github/workflows/labels-sync.yml (ghaction-github-labeler)
+
+- name: 'type: bug'
+  color: f37d59
+  description: A glitch in the matrix. An unexpected feature.
+
+- name: 'type: enhancement'
+  color: 71c9c5
+  description: An existing feature that could be great. Level up.
+
+- name: 'type: feature'
+  color: 71c9c5
+  description: A request to build something that does not yet exist.
+
+- name: 'type: question'
+  color: b2d3dE
+  description: This issue is blocked pending more information.
+
+- name: 'type: task'
+  color: b2d3dE
+  description: A clearly defined, scoped unit of work. A single objective.
+
+- name: 'type: chore'
+  color: b2d3dE
+  description: Necessary but unglamorous work required for project health.
+
+- name: 'type: maintenance'
+  color: faca78
+  description: Keeping the engine clean. Upgrades, refactors, CI, tooling.
+
+- name: 'type: triage'
+  color: f37d59
+  description: Requires investigation to determine the root cause and next steps.
+
+- name: 'type: security'
+  color: e05047
+  description: A vulnerability or hardening enhancement. All hands on deck.
+
+- name: 'status: awaiting review'
+  color: 8e456a
+  description: Ready for peer review and scrutiny.
+
+- name: 'priority: low'
+  color: 690a34
+  description:  It's in the system, slated for review and execution without immediate operational impact. We'll get to it with strategic precision when the bandwidth aligns.
+
+- name: 'priority: normal'
+  color: 690a34
+  description: This task is on our active worklist, ensuring a thorough and correct resolution within our typical service parameters. No theatrics, just diligent execution.
+
+- name: 'priority: hot-fix'
+  color: 690a34
+  description: This issue demands expedited attention to mitigate potential impact. We're re-sequencing resources to accelerate its resolution before it escalates.
+
+- name: 'priority: red-alert'
+  color: 690a34
+  description:  This indicates an immediate, high-impact operational imperative. All available resources are now focused on this resolution to stabilize systems.
+
+- name: 'type: documentation'
+  color: 2fbceb
+  description: If it's not written down, it didn't happen. Let's make it happen.
+
+- name: "status: working as intended"
+  color: 575757
+  description: It's not a bug, it's a feature.
+
+- name: 'status: needs reproduction'
+  color: faca78
+  description: Needs a deterministic set of steps to reproduce.
+
+- name: 'status: pending triage'
+  color: b2d3dE
+  description: Waiting for maintainer triage.
+
+- name: "status: 3rd party issue"
+  color: e88707
+  description: The root cause lies outside our codebase, likely with a third-party dependency.
+
+- name: 'os: windows'
+  color: aeb1C2
+  description: An issue specific to the Windows operating system.
+
+- name: 'os: mac'
+  color: aeb1C2
+  description: An issue specific to the macOS operating system.
+
+- name: 'os: linux'
+  color: aeb1C2
+  description: An issue specific to a Linux distribution.

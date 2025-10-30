@@ -1,0 +1,16 @@
+name: Coverage (Jest)
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  coverage:
+    uses: REVREBEL/.github/.github/workflows/_coverage-jest.yml@main
+    with:
+      node_version: ${{ vars.NODE_VERSION || '22' }}
+      working_directory: '.'
+      coverage_path: 'coverage/lcov.info'
+      run_tests_cmd: 'npm ci && npx jest --coverage'
+      codecov_flags: 'jest'
+      codecov_fail_ci_if_error: 'false'
