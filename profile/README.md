@@ -1,3 +1,9 @@
+<div align="center">
+  <a href="https://github.com/__OWNER__/__REPO__">
+    <img width="25%" src="https://res.cloudinary.com/revrebel/image/upload/c_scale,w_250/v1761516148/RR/Logos/revrebel-logo.png" alt="__REPO__ logo">
+  </a>
+</div>
+
 ## Hi there 👋
 
 We are REVREBEL. Our mission: to **hack hospitality.** We are a hospitality-native revenue strategists, an unseen force engineering clarity from complexity, and transforming challenges into calculated advantages. We fuse rigorous branding acumen with deep contextual fluency in hospitality, technology, and performance-driven creative. Consider us the expanded brain of strategic insight — crafting strategy, copy, and design assets that are invariably on-brand, on-voice, and on-point.
