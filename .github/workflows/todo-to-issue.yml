@@ -1,0 +1,23 @@
+name: TODO to Issue
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  create_issues:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: alstr/todo-to-issue-action@v5
+        with:
+          REPO: ${{ github.repository }}
+          BEFORE: ${{ github.event.before }}
+          SHA: ${{ github.sha }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          LABEL: "type: documentation"
+          COMMENT_MARKER: "@todo"
