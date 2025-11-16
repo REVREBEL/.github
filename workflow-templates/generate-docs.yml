@@ -1,0 +1,113 @@
+name: Generate Docs for Branch
+
+on:
+  workflow_dispatch:
+    inputs:
+      repository:
+        description: 'Repository (owner/repo)'
+        required: true
+        default: 'owner/repo'
+      branch_name:
+        description: 'Branch name to generate docs for'
+        required: true
+      continue_config:
+        description: 'Continue agent configuration to use'
+        required: true
+        # Set a default value if you have a default config your'd like to use
+        # default: 'agent-config-name'
+      continue_org:
+        description: 'Continue org to use'
+        required: true
+        # Set a default value if you have a default org your'd like to use
+        # default: 'your-org-name'
+
+jobs:
+  write-docs:
+    runs-on: ubuntu-latest
+    name: Write Documentation for Branch
+    env:
+      CONTINUE_API_KEY: ${{ secrets.CONTINUE_API_KEY }}
+      CONTINUE_ORG: ${{ github.event.inputs.continue_org }}
+      CONTINUE_CONFIG: ${{ github.event.inputs.continue_config }}
+
+    steps:
+
+    - name: Checkout fork repository
+      uses: actions/checkout@v4
+      with:
+        repository: ${{ github.event.inputs.repository || 'owner/repo' }}
+        token: ${{ secrets.GH_PAT }}
+        fetch-depth: 0  # Full history needed for sync
+
+    - name: Setup git configuration
+      run: |
+        git config user.name "github-actions[doc-writer-bot]"
+        git config user.email "yourname@email.com"
+
+    - name: Checkout target branch
+      run: |
+        git fetch origin ${{ github.event.inputs.branch_name }}
+        git checkout ${{ github.event.inputs.branch_name }}
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: Install Continue CLI
+      run: |
+        echo "Installing Continue CLI..."
+        npm i -g @continuedev/cli
+
+    - name: Verify Continue CLI installation
+      run: |
+        echo "Checking Continue CLI version..."
+        cn --version || exit 1
+
+    - name: Set branch name
+      id: branch
+      run: |
+        BRANCH_NAME="${{ github.event.inputs.branch_name }}-docs-update-$(date +%Y-%m-%d-%H-%M-%S)"
+        echo "branch_name=$BRANCH_NAME" >> $GITHUB_OUTPUT
+        echo "Branch name: $BRANCH_NAME"
+
+    - name: Generate git diff context
+      run: |
+        echo "Git changes:" > context.txt
+        git diff origin/main..HEAD --stat >> context.txt
+        echo -e "\n\nFile list:" >> context.txt
+        git diff origin/main..HEAD >> context.txt
+        echo "Generated context file:"
+        cat context.txt
+
+    - name: Create documentation branch
+      run: |
+        echo "Creating branch: ${{ steps.branch.outputs.branch_name }}"
+        git checkout -b "${{ steps.branch.outputs.branch_name }}"
+
+    - name: Generate documentation with Continue CLI
+      run: |
+        echo "Running Continue agent to generate documentation..."
+        cn --config <continue-user>/<agent-config> \
+           --auto \
+           --allow Write \
+           -p \
+           --prompt ./context.txt \
+           "Analyze the provided git diff and identify any new functionality introduced. Summarise the new features in a few sentences. Then search the existing documentation in the site docs/ directory to determine whether these features are already documented in a way that enables users to use them. If documentation is missing or incomplete, create or modify Markdown files under the site diretory (without changing any code) to add clear explanations, usage instructions and examples for the new features in the same style and format as the existing documentation. Finally, print a brief summary of the documentation changes you made."
+
+    - name: Clean up temporary files
+      run: rm -f context.txt
+
+    - name: Commit and push documentation changes
+      run: |
+        echo "Review git status..."
+        git status
+
+        echo "Adding files edited in site directory to git..."
+        git add site/
+
+        echo "Committing changes..."
+        git commit -s -m "docs: update for new functionality from branch ${{ github.event.inputs.branch_name }}"
+
+        echo "Pushing changes to origin..."
+        git push --set-upstream origin "${{ steps.branch.outputs.branch_name }}"
