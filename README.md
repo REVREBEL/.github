@@ -77,7 +77,7 @@ In any repo → **Actions → New workflow** → pick “Node CI (pnpm)”, “R
 
 <table width="100%">
   <tr>
-    <td><img src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/get-in-touch_dark.png" alt="Get in Touch"/></td>
+    <td><img src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/get-in-touch_dark.png" alt="Get in Touch" align="left" /></td>
     <td align="center">
       <a href="https://github.com/REVREBEL">
         <img src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/icons/github-outline_dark.png" alt="GitHub" width="36" />
