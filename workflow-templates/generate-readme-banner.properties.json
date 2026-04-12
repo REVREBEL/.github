@@ -1,0 +1,12 @@
+{
+  "name": "Generate README Banner",
+  "description": "Generate branded README banner images from shared REVREBEL templates and fonts.",
+  "iconName": "color",
+  "categories": [
+    "automation",
+    "deployment"
+  ],
+  "filePatterns": [
+    "README.md$"
+  ]
+}
