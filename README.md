@@ -65,12 +65,6 @@ In any repo → **Actions → New workflow** → pick “Node CI (pnpm)”, “R
 
 
 
-
-
-
-
-
-
 <table>
   <tbody>
     <tr>
