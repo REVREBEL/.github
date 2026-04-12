@@ -73,12 +73,16 @@ In any repo → **Actions → New workflow** → pick “Node CI (pnpm)”, “R
   <img alt="REVREBEL/.github's brand logo without text" align="right" src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/logos/-revrebel-vertical-logo-blue_300px.png" width="15%" />
 </a>
 
-
-
-<table width="100%">
-  <tr>
-    <td><img src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/get-in-touch_dark.png" alt="Get in Touch" align="left" /></td>
-    <td align="center">
+<table width="100%" style="border-collapse: collapse; border: none;">
+  <tr style="border: none;">
+    <td style="border: none; white-space: nowrap;">
+      <img
+        src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/get-in-touch_dark.png"
+        alt="Get in Touch"
+        height="30"
+      />
+    </td>
+    <td align="center" style="border: none; white-space: nowrap;">
       <a href="https://github.com/REVREBEL">
         <img src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/icons/github-outline_dark.png" alt="GitHub" width="36" />
       </a>&nbsp;
@@ -92,7 +96,7 @@ In any repo → **Actions → New workflow** → pick “Node CI (pnpm)”, “R
         <img src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/icons/blog-outline.png" alt="Blog" width="36" />
       </a>
     </td>
-    <td align="right">
+    <td align="right" width="100%" style="border: none; white-space: nowrap;">
       <a href="https://www.revrebel.io"><strong>www.revrebel.io</strong></a>
     </td>
   </tr>
