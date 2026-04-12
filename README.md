@@ -1,6 +1,15 @@
-[![Social banner for REVREBEL](https://raw.githubusercontent.com/REVREBEL/.github/main/assets/header-banner.gif)](https://revrebel.io)
-
-
+<p align="center">
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset=".github/assets/readme-banner_dark.png"
+    />
+    <img
+      src=".github/assets/readme-banner_light.png"
+      alt="Repository banner"
+    />
+  </picture>
+</p>
 
 # REVREBEL ORG WIDE CONFIG
 
