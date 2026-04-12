@@ -66,9 +66,8 @@ In any repo → **Actions → New workflow** → pick “Node CI (pnpm)”, “R
 
 <!-- Change your small logo -->
 <a href="https://github.com/REVREBEL/.github">
-  <img alt="REVREBEL/.github's brand logo without text" align="right" src="https://res.cloudinary.com/revrebel/image/upload/c_scale,w_150/v1758704366/RR/Logos/revrebel-blue-square-logo_kb3my5.png" width="15%" />
+  <img alt="REVREBEL/.github's brand logo without text" align="right" src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/logos/-revrebel-vertical-logo-blue_300px.png" width="15%" />
 </a>
-
 
 
 
