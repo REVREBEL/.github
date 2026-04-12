@@ -1,3 +1,7 @@
+[![Social banner for REVREBEL](https://raw.githubusercontent.com/REVREBEL/.github/main/assets/header-banner.svg)](https://revrebel.io)
+
+
+
 # REVREBEL Org-wide Config
 
 Standardized community health files, issue/PR templates, and GitHub Actions for all repositories in the organization.
@@ -13,7 +17,7 @@ In any repo → **Actions → New workflow** → pick “Node CI (pnpm)”, “R
 
 <div align="center">
   <a href="https://github.com/REVREBEL/.github">
-    <img width="25%" src="https://res.cloudinary.com/revrebel/image/upload/c_scale,w_250/v1761516148/RR/Logos/revrebel-logo.png" alt=".github logo">
+    <img width="25%" src="[https://raw.githubusercontent.com/REVREBEL/.github/main/assets/logos/-revrebel-vertical-logo-blue_300px.png" alt=".github logo">
   </a>
   <br>
   <a href="https://github.com/REVREBEL/.github/issues">
