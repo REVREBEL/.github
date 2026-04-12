@@ -69,3 +69,28 @@ In any repo → **Actions → New workflow** → pick “Node CI (pnpm)”, “R
   <img alt="REVREBEL/.github's brand logo without text" align="right" src="https://res.cloudinary.com/revrebel/image/upload/c_scale,w_150/v1758704366/RR/Logos/revrebel-blue-square-logo_kb3my5.png" width="15%" />
 </a>
 
+
+
+
+<table width="100%">
+  <tr>
+    <td><strong>GET IN TOUCH</strong></td>
+    <td align="center">
+      <a href="https://github.com/REVREBEL">
+        <img src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/icons/github-outline_dark.png" alt="GitHub" width="36" />
+      </a>&nbsp;
+      <a href="mailto:hello@revrebel.io">
+        <img src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/icons/email-outline_dark.png" alt="Email" width="36" />
+      </a>&nbsp;
+      <a href="https://www.linkedin.com/company/revrebel/">
+        <img src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/icons/linkedin-outline.png" alt="LinkedIn" width="36" />
+      </a>&nbsp;
+      <a href="https://www.revrebel.io/blog">
+        <img src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/icons/blog-outline.png" alt="Blog" width="36" />
+      </a>
+    </td>
+    <td align="right">
+      <a href="https://www.revrebel.io"><strong>www.revrebel.io</strong></a>
+    </td>
+  </tr>
+</table>
