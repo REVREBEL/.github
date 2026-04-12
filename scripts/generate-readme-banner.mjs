@@ -121,15 +121,16 @@ function getRepoSlug() {
   return path.basename(repoRoot);
 }
 
+
 /**
- * Convert a slug-like repository name into a cleaner display title.
+ * Convert a slug-like repository name into an uppercase display title.
  *
  * Examples:
- * - revrebel-metrics-database -> REVREBEL Metrics Database
- * - hotel_triton_style -> Hotel Triton Style
+ * - revrebel-metrics-database -> REVREBEL METRICS DATABASE
+ * - hotel_triton_style -> HOTEL TRITON STYLE
  *
  * @param {string} repoSlug - Repository slug.
- * @returns {string} Human-friendly title.
+ * @returns {string} Human-friendly uppercase title.
  */
 function formatRepoTitle(repoSlug) {
   const normalized = repoSlug
@@ -137,18 +138,9 @@ function formatRepoTitle(repoSlug) {
     .replace(/[_-]+/g, ' ')
     .replace(/\s+/g, ' ');
 
-  const words = normalized.split(' ').filter(Boolean);
-
-  return words
-    .map((word) => {
-      if (word.toLowerCase() === 'revrebel') {
-        return 'REVREBEL';
-      }
-
-      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-    })
-    .join(' ');
+  return normalized.toUpperCase();
 }
+
 
 /**
  * Escape XML special characters for safe SVG text rendering.
@@ -298,7 +290,7 @@ function buildSvgOverlay({
           font-family="RRBrand"
           font-size="${titleFontSize}"
           font-weight="700"
-          letter-spacing="1.2"
+          letter-spacing=".95"
           fill="${textColor}"
         >${escapeXml(line)}</text>
       `;
@@ -424,9 +416,9 @@ async function main() {
 
   const repoSlug = getRepoSlug();
   const repoTitle = formatRepoTitle(repoSlug);
-  const subtitle = 'GitHub Repository';
+  const subtitle = 'GITHUB REPOSITORY';
   const brandFont = getEmbeddedFont();
-
+  
   await generateBanner({
     inputPath: templatePaths.light,
     outputPath: outputPaths.light,
