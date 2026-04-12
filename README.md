@@ -93,7 +93,7 @@ In any repo → **Actions → New workflow** → pick “Node CI (pnpm)”, “R
         <img src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/icons/linkedin-outline.png" alt="LinkedIn" width="36" />
       </a>&nbsp;
       <a href="https://www.revrebel.io/blog">
-        <img src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/icons/blog-outline.png" alt="Blog" width="36" />
+        <img src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/icons/blog-outline.png" alt="Blog" width="36" />      
       </a>
     </td>
     <td align="right" width="100%" style="border: none; white-space: nowrap;">
@@ -101,3 +101,56 @@ In any repo → **Actions → New workflow** → pick “Node CI (pnpm)”, “R
     </td>
   </tr>
 </table>
+
+
+
+<table width="100%" style="border-collapse: collapse; border: none;">
+  <tr>
+    <td>
+      <img src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/get-in-touch_dark.png" alt="Get in Touch" height="30" />
+    </td>
+    <td>
+      <a href="https://github.com/REVREBEL">
+        <img src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/icons/github-outline_dark.png" alt="GitHub" width="36" />
+      </a>&nbsp;
+      <a href="mailto:hello@revrebel.io">
+        <img src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/icons/email-outline_dark.png" alt="Email" width="36" />
+      </a>&nbsp;
+      <a href="https://www.linkedin.com/company/revrebel/">
+        <img src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/icons/linkedin-outline.png" alt="LinkedIn" width="36" />
+      </a>&nbsp;
+      <a href="https://www.revrebel.io/blog">
+        <img src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/icons/blog-outline.png" alt="Blog" width="36" />
+      </a>
+    </td>
+    <td align="right">
+      <a href="https://www.revrebel.io"><strong>www.revrebel.io</strong></a>
+    </td>
+  </tr>
+</table>
+
+
+
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/get-in-touch_dark.png" alt="Get in Touch" height="30" />
+</p>
+
+<p align="center">
+  <a href="https://github.com/REVREBEL">
+    <img src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/icons/github-outline_dark.png" alt="GitHub" width="36" />
+  </a>&nbsp;
+  <a href="mailto:hello@revrebel.io">
+    <img src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/icons/email-outline_dark.png" alt="Email" width="36" />
+  </a>&nbsp;
+  <a href="https://www.linkedin.com/company/revrebel/">
+    <img src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/icons/linkedin-outline.png" alt="LinkedIn" width="36" />
+  </a>&nbsp;
+  <a href="https://www.revrebel.io/blog">
+    <img src="https://raw.githubusercontent.com/REVREBEL/.github/main/assets/icons/blog-outline.png" alt="Blog" width="36" />
+  </a>
+</p>
+
+<p align="right">
+  <a href="https://www.revrebel.io"><strong>www.revrebel.io</strong></a>
+</p>
