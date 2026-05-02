@@ -66,33 +66,34 @@ And yes — occasionally a great soundtrack helps.
 
 # **LANGUAGES + TOOLS**
 
-<p align="left"  width="1200" height="200" >
-<a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/gnubash/163666" alt="bash" width="40" height="40" /></a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/css/047C97" alt="css3" width="40" height="40" /></a>
-<a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/docker/00A6B6" alt="docker" width="40" height="40" /></a>
-<a href="https://expressjs.com/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/express/163666" alt="express" width="40" height="40" /></a>
-<a href="https://cloud.google.com/docs" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/googlecloud/047C97" alt="gcp" width="40" height="40" /></a>
-<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/javascript/FACA78" alt="javascript" width="40" height="40" /></a>
-<a href="https://www.kernel.org/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/linux/163666" alt="linux" width="40" height="40" /></a>
-<a href="https://mariadb.com/kb/en/documentation/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/mariadb/F37D59" alt="mariadb" width="40" height="40" /></a>
-<a href="https://webflow.com/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/webflow/047C97" alt="webflow" width="40" height="40" /></a>
-<a href="https://dev.mysql.com/doc/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/mysql/047C97" alt="mysql" width="40" height="40" /></a>
-<a href="https://nginx.org/en/docs/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/nginx/71C9C5" alt="nginx" width="40" height="40" /></a>
-</p>
-&emsp;
-<p align="left"  width="1200" height="200">
-<a href="https://nodejs.org/docs/latest/api/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/nodedotjs/00A6B6" alt="nodejs" width="40" height="40" /></a>
-<a href="https://www.postgresql.org/docs/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/postgresql/163666" alt="postgresql" width="40" height="40" /></a>
-<a href="https://docs.python.org/3/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/python/00A6B6" alt="python" width="40" height="40" /></a>
-<a href="https://react.dev/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/react/71C9C5" alt="react" width="40" height="40" /></a>
-<a href="https://sass-lang.com/documentation/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/sass/8E456A" alt="sass" width="40" height="40" /></a>
-<a href="https://www.typescriptlang.org/docs/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/typescript/047C97" alt="typescript" width="40" height="40" /></a>
-<a href="https://analytics.google.com/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/googleanalytics/F37D59" alt="google analytics" width="40" height="40" /></a>
-<a href="https://cloud.google.com/bigquery/docs" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/googlebigquery/00A6B6" alt="google bigquery" width="40" height="40" /></a>
-<a href="https://tagmanager.google.com/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/googletagmanager/047C97" alt="google tag manager" width="40" height="40" /></a>
-<a href="https://colab.research.google.com/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/googlecolab/FACA78" alt="google colab" width="40" height="40" /></a>
-<a href="https://gemini.google.com/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/googlegemini/8E456A" alt="google gemini" width="40" height="40" /></a>
-</p>
+<table border="0">
+  <tr>
+    <td><a href="https://www.gnu.org/software/bash/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/gnubash/163666" alt="bash" width="60" height="60" /></a></td>
+    <td><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/css/047C97" alt="css3" width="60" height="60" /></a></td>
+    <td><a href="https://www.docker.com/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/docker/00A6B6" alt="docker" width="60" height="60" /></a></td>
+    <td><a href="https://expressjs.com/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/express/163666" alt="express" width="60" height="60" /></a></td>
+    <td><a href="https://cloud.google.com/docs" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/googlecloud/047C97" alt="gcp" width="60" height="60" /></a></td>
+    <td><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/javascript/FACA78" alt="javascript" width="60" height="60" /></a></td>
+    <td><a href="https://www.kernel.org/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/linux/163666" alt="linux" width="60" height="60" /></a></td>
+    <td><a href="https://mariadb.com/kb/en/documentation/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/mariadb/F37D59" alt="mariadb" width="60" height="60" /></a></td>
+    <td><a href="https://webflow.com/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/webflow/047C97" alt="webflow" width="60" height="60" /></a></td>
+    <td><a href="https://dev.mysql.com/doc/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/mysql/047C97" alt="mysql" width="60" height="60" /></a></td>
+    <td><a href="https://nginx.org/en/docs/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/nginx/71C9C5" alt="nginx" width="60" height="60" /></a></td>
+  </tr>
+  <tr>
+    <td><a href="https://nodejs.org/docs/latest/api/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/nodedotjs/00A6B6" alt="nodejs" width="60" height="60" /></a></td>
+    <td><a href="https://www.postgresql.org/docs/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/postgresql/163666" alt="postgresql" width="60" height="60" /></a></td>
+    <td><a href="https://docs.python.org/3/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/python/00A6B6" alt="python" width="60" height="60" /></a></td>
+    <td><a href="https://react.dev/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/react/71C9C5" alt="react" width="60" height="60" /></a></td>
+    <td><a href="https://sass-lang.com/documentation/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/sass/8E456A" alt="sass" width="60" height="60" /></a></td>
+    <td><a href="https://www.typescriptlang.org/docs/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/typescript/047C97" alt="typescript" width="60" height="60" /></a></td>
+    <td><a href="https://analytics.google.com/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/googleanalytics/F37D59" alt="google analytics" width="60" height="60" /></a></td>
+    <td><a href="https://cloud.google.com/bigquery/docs" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/googlebigquery/00A6B6" alt="google bigquery" width="60" height="60" /></a></td>
+    <td><a href="https://tagmanager.google.com/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/googletagmanager/047C97" alt="google tag manager" width="60" height="60" /></a></td>
+    <td><a href="https://colab.research.google.com/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/googlecolab/FACA78" alt="google colab" width="60" height="60" /></a></td>
+    <td><a href="https://gemini.google.com/" target="_blank" rel="noreferrer"><img src="https://cdn.simpleicons.org/googlegemini/8E456A" alt="google gemini" width="60" height="60" /></a></td>
+  </tr>
+</table>
 
 <br>
 <br>
