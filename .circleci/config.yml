@@ -3,7 +3,7 @@ version: 2.1
 
 orbs:
   codecov: codecov/codecov@5.4.3
-  python: circleci/python@3.3.0  # optional, for caching helpers
+  python: circleci/python@4.0.0  # optional, for caching helpers
 
 jobs:
   test-api:
