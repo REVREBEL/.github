@@ -33,7 +33,7 @@ jobs:
     steps:
 
     - name: Checkout fork repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v6
       with:
         repository: ${{ github.event.inputs.repository || 'owner/repo' }}
         token: ${{ secrets.GH_PAT }}

@@ -17,7 +17,7 @@ jobs:
       FULL_REPO: ${{ github.repository }}                         # e.g. REVREBEL/my-repo
       DEFAULT_BRANCH: ${{ github.ref_name }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ inputs.node_version }}
