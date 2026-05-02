@@ -1,4 +1,4 @@
-[![Social banner for REVREBEL](https://raw.githubusercontent.com/REVREBEL/.github/main/assets/header-banner.gif)](https://revrebel.io)
+[![Social banner for REVREBEL](https://raw.githubusercontent.com/REVREBEL/.github/main/assets/revrebel-readme-banner.gif)](https://revrebel.io)
 
 
 <div align="left">
