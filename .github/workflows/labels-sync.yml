@@ -1,26 +1,92 @@
-name: Sync Labels
+name: Sync Labels (REVREBEL organization)
+
 on:
-  push:
-    branches: [ main ]
+  pull_request:
     paths:
-      - '.github/labels.yml'
+      - 'labels.yml'
       - '.github/workflows/labels-sync.yml'
+      - '.github/scripts/sync-labels.mjs'
+      - '.github/scripts/sync-labels.test.mjs'
+  push:
+    branches: [main]
+    paths:
+      - 'labels.yml'
+      - '.github/workflows/labels-sync.yml'
+      - '.github/scripts/sync-labels.mjs'
   workflow_dispatch:
+    inputs:
+      apply:
+        description: 'Apply changes (unchecked: dry-run only)'
+        required: false
+        type: boolean
+        default: false
+      repository:
+        description: 'Optional full repo name, e.g. REVREBEL/linear-agents; empty = all installed repos'
+        required: false
+        type: string
+  schedule:
+    - cron: '17 7 * * 1'
 
 permissions:
   contents: read
-  issues: write
-  metadata: read
+
+concurrency:
+  group: revrebel-label-reconciliation
+  cancel-in-progress: false
 
 jobs:
   labels:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v7
-      - name: Sync labels
-        uses: crazy-max/ghaction-github-labeler@v6
         with:
-          yaml_file: .github/labels.yml
-          skip_delete: true
+          persist-credentials: false
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+      - name: Validate canonical labels and reconciliation logic
+        run: node --test .github/scripts/sync-labels.test.mjs
+      - name: Check GitHub App credential configuration
+        if: github.event_name != 'pull_request'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          APP_ID: ${{ vars.REVREBEL_GITHUB_APP_ID }}
+          APP_PRIVATE_KEY: ${{ secrets.REVREBEL_GITHUB_APP_PRIVATE_KEY }}
+        run: |
+          if [[ -z "$APP_ID" || -z "$APP_PRIVATE_KEY" ]]; then
+            echo "::error::Set REVREBEL_GITHUB_APP_ID (Actions variable) and REVREBEL_GITHUB_APP_PRIVATE_KEY (Actions secret) for the revrebel-github App."
+            exit 1
+          fi
+      - name: Mint installation token for all REVREBEL repositories
+        if: github.event_name != 'pull_request'
+        id: app-token
+        uses: actions/create-github-app-token@v3
+        with:
+          app-id: ${{ vars.REVREBEL_GITHUB_APP_ID }}
+          private-key: ${{ secrets.REVREBEL_GITHUB_APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          permission-issues: write
+      - name: Verify expected GitHub App identity
+        if: github.event_name != 'pull_request'
+        env:
+          ACTUAL_APP: ${{ steps.app-token.outputs.app-slug }}
+        run: |
+          if [[ "$ACTUAL_APP" != "revrebel-github" ]]; then
+            echo "::error::Expected GitHub App revrebel-github, got $ACTUAL_APP"
+            exit 1
+          fi
+      - name: Reconcile canonical labels across installed repositories
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+          GITHUB_REPOSITORY_OWNER: ${{ github.repository_owner }}
+          LABEL_SYNC_REPOSITORY: ${{ inputs.repository }}
+          APPLY_REQUESTED: ${{ inputs.apply }}
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          # Default manual run previews; push/schedule reconcile automatically.
+          if [[ "$EVENT_NAME" == "workflow_dispatch" && "$APPLY_REQUESTED" != "true" ]]; then
+            node .github/scripts/sync-labels.mjs --dry-run
+          else
+            node .github/scripts/sync-labels.mjs --apply
+          fi
