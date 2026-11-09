@@ -1,67 +1,67 @@
 # Canonical label set for REVREBEL org
 # Managed by .github/workflows/labels-sync.yml (ghaction-github-labeler)
 
-- name: 'type: bug'
+- name: 'issue-type: bug'
   color: 163666
   description: Something is behaving differently than intended and needs a fix.
 
-- name: 'type: enhancement'
+- name: 'issue-type: enhancement'
   color: 047c97
   description: Improves an existing feature, workflow, or capability.
 
-- name: 'type: feature'
+- name: 'issue-type: feature'
   color: 047c97
   description: Introduces a new capability, experience, or piece of functionality.
 
-- name: 'type: task'
+- name: 'issue-type: task'
   color: 71c9c5
   description: A defined unit of work with a clear objective and expected outcome.
 
-- name: 'type: chore'
+- name: 'issue-type: chore'
   color: faca78
   description: Necessary operational work that keeps the project healthy and moving.
 
-- name: 'type: maintenance'
+- name: 'issue-type: maintenance'
   color: f37d59
   description: Upgrades, refactors, tooling, CI, cleanup, and other system upkeep.
 
-- name: 'type: triage'
+- name: 'issue-type: triage'
   color: e05047
   description: Requires investigation before the root cause or next action is clear.
 
-- name: 'type: security'
+- name: 'issue-type: security'
   color: e05047
   description: Addresses a vulnerability, security risk, permission issue, or hardening need.
 
-- name: 'type: question'
+- name: 'issue-type: question'
   color: 8e456a
   description: Requires additional information or a decision before work can continue.
 
-- name: 'type: research'
+- name: 'issue-type: research'
   color: 8e456a
   description: Investigation needed to answer a question, validate an approach, or inform a decision.
 
-- name: 'type: documentation'
+- name: 'issue-type: documentation'
   color: 8e456a
   description: Creates or improves documentation, guides, references, or project context.
 
-- name: 'status: awaiting review'
+- name: 'status-level: awaiting review'
   color: 8e456a
   description: Implementation is complete and ready for review, testing, or approval.
 
-- name: 'status: working as intended'
+- name: 'status-level: working as intended'
   color: 00a6b6
   description: The reported behavior matches the current design or expected system behavior.
 
-- name: 'status: needs reproduction'
+- name: 'status-level: needs reproduction'
   color: faca78
   description: Requires reliable steps, conditions, or evidence to reproduce the reported behavior.
 
-- name: 'status: pending triage'
+- name: 'status-level: pending triage'
   color: f37d59
   description: Waiting for initial review, classification, and assignment of next steps.
 
-- name: 'status: 3rd party issue'
+- name: 'status-level: 3rd party issue'
   color: 8e456a
   description: The root cause sits outside our codebase in a dependency, provider, API, or external service.
 
