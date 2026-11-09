@@ -1,18 +1,35 @@
-# Label PRs by file globs
-docs:
-  - '**/*.md'
-ci:
-  - '.github/workflows/**'
-frontend:
-  - 'apps/**'
-  - 'packages/**'
-  - '**/*.css'
-  - '**/*.scss'
-  - '**/*.ts'
-  - '**/*.tsx'
-backend:
-  - '**/*.go'
-  - '**/*.py'
-  - '**/*.rs'
-  - '**/*.rb'
-  - '**/*.kt'
+# Shared default rules for file-path-based PR classification.
+# Keys match the canonical names in labels.yml.
+'type: documentation':
+  - changed-files:
+      - any-glob-to-any-file: '**/*.md'
+'dev-area:backend':
+  - changed-files:
+      - any-glob-to-any-file:
+          - '**/*.go'
+          - '**/*.py'
+          - '**/*.rs'
+          - '**/*.rb'
+          - '**/*.kt'
+          - 'linear-agent-bridge/**'
+          - 'scripts/**/*.mjs'
+'dev-area:frontend':
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'apps/**'
+          - '**/*.tsx'
+          - '**/*.jsx'
+          - '**/*.css'
+          - '**/*.scss'
+'dev-area:design-system':
+  - changed-files:
+      - any-glob-to-any-file:
+          - '**/*.stories.tsx'
+          - '**/*.stories.ts'
+          - '**/tokens/**'
+'type: maintenance':
+  - changed-files:
+      - any-glob-to-any-file:
+          - '.github/workflows/**'
+          - '**/package-lock.json'
+          - '**/pnpm-lock.yaml'
