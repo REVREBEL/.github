@@ -65,19 +65,19 @@
   color: 8e456a
   description: The root cause sits outside our codebase in a dependency, provider, API, or external service.
 
-- name: 'priority: low'
+- name: 'priority-level: low'
   color: B2D3dE
   description: Worth addressing, but unlikely to create meaningful near-term impact if deferred.
 
-- name: 'priority: normal'
+- name: 'priority-level: normal'
   color: 00a6b6
   description: Standard-priority work to be handled through the normal development queue.
 
-- name: 'priority: hot-fix'
+- name: 'priority-level: hot-fix'
   color: f37d59
   description: Requires expedited attention because the issue is materially affecting users or operations.
 
-- name: 'priority: red-alert'
+- name: 'priority-level: red-alert'
   color: e05047
   description: Immediate, high-impact issue requiring focused attention until the system is stabilized.
 
@@ -102,37 +102,37 @@
   description: Routes agent execution to the configured macOS environment.
 
 - name: 'dev-area:backend'
-  color: f37d59
+  color: 00a6b6
   description: Backend services, APIs, business logic, databases, workers, or server-side behavior.
 
 - name: 'dev-area:frontend'
-  color: FAFAFA
+  color: 047c97
   description: Frontend application logic, rendering, state, routing, and client-side behavior.
 
-- name: 'product-area:frontend'
-  color: FAFAFA
-  description: Product-facing frontend experience, behavior, or functionality.
-
 - name: 'dev-area:product'
-  color: FAFAFA
+  color: 163666
   description: Product requirements, behavior, flows, feature definition, or product-level decisions.
 
 - name: 'dev-area:ux'
-  color: FAFAFA
+  color: 047c97
   description: User flows, interaction patterns, usability, information architecture, or experience design.
 
 - name: 'dev-area:ui'
-  color: FAFAFA
+  color: 00a6b6
   description: Visual interface implementation, layout, styling, states, and presentation.
 
 - name: 'dev-area:design-system'
-  color: FAFAFA
+  color: 71c9c5
   description: Shared components, tokens, patterns, standards, and design-system infrastructure.
 
 - name: 'dev-area:accessibility'
-  color: FAFAFA
+  color: faca78
   description: Accessibility, semantic structure, keyboard behavior, assistive technology, and inclusive UX.
 
 - name: 'dev-area:prototype'
-  color: FAFAFA
+  color: f37d59
   description: Experimental or exploratory work used to test an idea before production implementation.
+
+- name: 'product-area:application'
+  color: 8e456a
+  description: Product-facing frontend experience, behavior, or functionality.
