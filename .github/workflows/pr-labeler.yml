@@ -1,15 +1,21 @@
 name: PR Labeler
+
 on:
   pull_request_target:
-    types: [opened, synchronize, reopened]
+    types: [opened, synchronize, reopened, ready_for_review]
+
 permissions:
   contents: read
   pull-requests: write
+
 jobs:
   label:
     runs-on: ubuntu-latest
     steps:
+      # Never check out untrusted PR head under pull_request_target.
+      # actions/labeler reads committed rules from the base branch.
       - uses: actions/labeler@v7
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          configuration-path: .github/labeler.yml
+          repo-token: ${{ github.token }}
+          configuration-path: labeler.yml
+          sync-labels: false
