@@ -91,9 +91,17 @@ export async function syncRepository(request, repo, labels, { dryRun = true, log
                current.name !== desired.name) {
       counts.update++;
       log(`${dryRun ? "[DRY-RUN]" : "[UPDATE]"} ${repo}: ${label.name} (update)`);
-      if (!dryRun) await request(base + "/" + encodeURIComponent(current.name), {
-        method: "PATCH", body: JSON.stringify(desired),
-      });
+      if (!dryRun) {
+        // GitHub's update-label endpoint uses new_name for renames, not name.
+        // A case-insensitive match can still require a capitalization correction.
+        const { name, ...attributes } = desired;
+        const patch = current.name === name
+          ? attributes
+          : { ...attributes, new_name: name };
+        await request(base + "/" + encodeURIComponent(current.name), {
+          method: "PATCH", body: JSON.stringify(patch),
+        });
+      }
     } else counts.unchanged++;
   }
   log(`${repo}: ${JSON.stringify(counts)} (dryRun=${dryRun})`);
