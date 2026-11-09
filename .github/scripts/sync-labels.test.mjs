@@ -46,6 +46,9 @@ test("apply updates existing labels, creates missing labels, and never deletes",
   ], { dryRun: false, log: () => {} });
   assert.deepEqual(calls.map(x => x.method), ["GET", "PATCH", "POST"]);
   assert.equal(calls[1].route, "/repos/REVREBEL/linear-agents/labels/type%3A%20bug");
+  assert.deepEqual(calls[1].body, { color: "163666", description: "New" });
+  assert.ok(!Object.hasOwn(calls[1].body, "name"));
+  assert.ok(!Object.hasOwn(calls[1].body, "new_name"));
   assert.equal(calls[2].body.name, "status: awaiting review");
 });
 
@@ -59,4 +62,39 @@ test("installation repository enumeration handles multiple pages", async () => {
   const repos = await listInstallationRepos(request);
   assert.equal(repos.length, 101);
   assert.equal(pages.length, 2);
+});
+
+test("apply repairs capitalization-only label drift using GitHub's new_name field", async () => {
+  const calls = [];
+  const request = async (route, options = {}) => {
+    calls.push({ route, method: options.method || "GET", body: options.body && JSON.parse(options.body) });
+    if (!options.method) return [{ name: "Type: Bug", color: "163666", description: "Canonical" }];
+    return {};
+  };
+  const counts = await syncRepository(request, "REVREBEL/linear-agents", [
+    { name: "type: bug", color: "163666", description: "Canonical" },
+  ], { dryRun: false, log: () => {} });
+  assert.deepEqual(counts, { create: 0, update: 1, unchanged: 0 });
+  assert.equal(calls.length, 2);
+  assert.equal(calls[1].method, "PATCH");
+  assert.equal(calls[1].route, "/repos/REVREBEL/linear-agents/labels/Type%3A%20Bug");
+  assert.deepEqual(calls[1].body, {
+    color: "163666",
+    description: "Canonical",
+    new_name: "type: bug",
+  });
+  assert.ok(!Object.hasOwn(calls[1].body, "name"));
+});
+
+test("dry-run reports capitalization-only drift without issuing PATCH", async () => {
+  const calls = [];
+  const request = async (route, options = {}) => {
+    calls.push(options.method || "GET");
+    return [{ name: "Type: Bug", color: "163666", description: "Canonical" }];
+  };
+  const counts = await syncRepository(request, "REVREBEL/linear-agents", [
+    { name: "type: bug", color: "163666", description: "Canonical" },
+  ], { dryRun: true, log: () => {} });
+  assert.deepEqual(counts, { create: 0, update: 1, unchanged: 0 });
+  assert.deepEqual(calls, ["GET"]);
 });
